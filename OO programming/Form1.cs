@@ -79,7 +79,7 @@ namespace OO_programming
                     ps.Tax = PayCalculatorNoThreshold.CalcualatTax(ps.GrossPay);
                     ps.Tax = double.Parse($"{ps.Tax:N2}");
                 }
-                ps.NetPay = ps.GrossPay - ps.Tax - ps.Superannuation;
+                ps.NetPay = ps.GrossPay - ps.Tax;
                 ps.NetPay = double.Parse($"{ps.NetPay:N2}");
             }
             else
