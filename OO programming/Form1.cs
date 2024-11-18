@@ -111,7 +111,7 @@ namespace OO_programming
 
 
             // get stream writer
-            StreamWriter strWriter = new StreamWriter($@"..\..\output\Pay-{ps.Employee.EmployeeID}-{ps.Employee.FullName}-{DateTime.Now.ToFileTime()}.csv");
+            StreamWriter strWriter = new StreamWriter($@"..\..\output\Pay-{ps.Employee.EmployeeID}-{ps.Employee.FullName}-{DateTime.Now:yyyy_MM_dd_hh_mm_ss}.csv");
             CsvWriter csvWriter = new CsvWriter(strWriter,culture);
             // create a list of payslip
             List<PaySlip> psList = new List<PaySlip>();
