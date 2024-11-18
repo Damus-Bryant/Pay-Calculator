@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -49,12 +49,12 @@ namespace OO_programming
         
         public static double CalculateGrossPay(double HoursWorked, double HourlyRate)
         {
-            return HourlyRate * HoursWorked;
+            return Math.Round(HourlyRate * HoursWorked,2);
         }
 
         public static double CalculateSuper(double GrossPay)
         {
-            return GrossPay * 0.11;
+            return Math.Round(GrossPay * 0.11,2);
         }
     }
 
@@ -77,7 +77,7 @@ namespace OO_programming
             {
                 if (GrossPay <= taxRate.MaxWkSalary)
                 {
-                    return (GrossPay + 0.99) * taxRate.TaxRateA - taxRate.TaxRateB;
+                    return Math.Round(((GrossPay + 0.99) * taxRate.TaxRateA - taxRate.TaxRateB),2);
                 }
             }
             return 0;
@@ -103,7 +103,7 @@ namespace OO_programming
             {
                 if(GrossPay <= taxRate.MaxWkSalary)
                 {
-                    return (GrossPay+0.99)*taxRate.TaxRateA-taxRate.TaxRateB;
+                    return Math.Round(((GrossPay + 0.99) * taxRate.TaxRateA - taxRate.TaxRateB), 2);
                 }
             }
             return 0;
