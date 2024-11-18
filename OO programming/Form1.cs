@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,22 +65,22 @@ namespace OO_programming
             {
                 // calculate gross pay and super
                 ps.GrossPay = PayCalculator.CalculateGrossPay(ps.HoursWorked,ps.Employee.HourlyRate);
-                ps.GrossPay = double.Parse($"{ps.GrossPay:N2}");
+                //ps.GrossPay = double.Parse($"{ps.GrossPay:N2}");
                 ps.Superannuation = PayCalculator.CalculateSuper(ps.GrossPay);
-                ps.Superannuation = double.Parse($"{ps.Superannuation:N2}");
+                //ps.Superannuation = double.Parse($"{ps.Superannuation:N2}");
                 // calculate tax based on TaxFreeThresold
                 if (ps.Employee.TaxFreeThreshold=="Y")
                 {
                     ps.Tax = PayCalculatorWithThreshold.CalcualatTax(ps.GrossPay);
-                    ps.Tax = double.Parse($"{ps.Tax:N2}");
+                    //ps.Tax = double.Parse($"{ps.Tax:N2}");
                 }
                 else
                 {
                     ps.Tax = PayCalculatorNoThreshold.CalcualatTax(ps.GrossPay);
-                    ps.Tax = double.Parse($"{ps.Tax:N2}");
+                    //ps.Tax = double.Parse($"{ps.Tax:N2}");
                 }
                 ps.NetPay = ps.GrossPay - ps.Tax;
-                ps.NetPay = double.Parse($"{ps.NetPay:N2}");
+                //ps.NetPay = double.Parse($"{ps.NetPay:N2}");
             }
             else
             {
